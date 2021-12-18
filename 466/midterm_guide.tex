@@ -1,0 +1,157 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amsmath}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\usepackage[margin=1.4in]{geometry}
+
+\title{Midterm Study Guide | CS 466 Software Processes}
+\author{Jared Dyreson \\ 
+        California State University, Fullerton}
+
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Chapter 1 | Introduction}
+
+\subsection{General Notes | Book}
+
+\begin{itemize}
+
+\item Specifications are important
+\item Difference between \emph{mass manufacturing} (\textcolor{red}{Waterfall}) \\ and \emph{predictable manufacturing} (\textcolor{red}{Agile/IID}).
+\item Factors that contribute to the demise of Waterfall. Clients:
+
+\begin{itemize}
+
+\item Are not sure what they want
+\item Have difficulty stating what they want and know
+\item Details of what [they] want will only be revealed during development
+\item Details are too complex
+\item Change their mind during development
+\item External forces lead to changes or enhancement requests
+
+\end{itemize}
+\item Agile development is nimble and does not rely on monolithic structures to hinder its performance
+
+\end{itemize}
+
+
+\subsection{General Notes | Slides}
+
+\begin{itemize}
+
+\item Project manager is supposed to define \textbf{clear objectives} and must also be \textbf{adaptive/reactive} when issues arise.
+\item Make sure you have the proper budget and time period in which the system must be completed including any interim milestones that must be met.
+\item The IMS is used for both the development team and the client, making sure the project is on track for completion.
+\item Tasks have; duration (hours), budget (money), and a measure of how status will be reported (50-50, \% complete, etc)
+\item These tasks show that they're; ahead, on, or behind schedule. Overrun can occur if tasks are not completed in the set time frame.
+\item Programs that successfully manager their schedule buffers tend to be successful (uhh, yeah?)
+\item IMS helps track down program staffing (hours and budget must be allocated, therefore number of engineers must be known). It is paramount that the correct number of SWE's are deployed on a project at any given time. \footnote{Lecture 2 | Pg. 11 - 13}
+\item When planning; look for risks (mitigate most if not all), use the least amount of the budget, properly schedule the development team and create a strong startup process. \footnote{Lecture 2 | Pg. 14}
+\item As a software manager, you need to successfully utilize the IMS and IMP to create a SBP that conforms to the time table allotted.
+\item During the startup (while establishing a baseline schedule/budget), the proposal information is used to:
+
+\begin{itemize}
+
+\item Create SBP
+\item Support IMS Planning
+\item Justify your organization's budget to program management
+\item Solidify the WBS you want to use to manage the program
+\item Create SDP
+
+\end{itemize}
+\item All software activities must have defined hours allotted and an associated budget. Please refrain from using LoE (Level of Effort) in an IMS unless it is explicitly stated to do so. Hard to quantify.
+
+\end{itemize}
+
+\subsection{Key Terms}
+
+\begin{itemize}
+
+\item Change Management Plan | describes how program artifacts will be controlled and how change will be managed during the development of the product
+\item IMP | Integrated Master Plan, which comprises a hierarchy of program events. Each event is supported by specific accomplishments. Event-driven plan. Structure in which the \textbf{IMS} conforms to.
+\item IMS | Integrated Master Schedule, which details work/planning packages which are necessary to support the \textbf{IMP's} events. Time table.
+\item Work Package | implies the task can be worked within the next several months
+\item Planning Package  | implies the task to be worked on at some future date on the program.
+\item Critical Chain Project Management | Minimize program schedule impact and keep insight into task implementation. You need to take into consideration Murphy's Law.
+\item STD | Software Technical Lead
+\item SPM | Software Project Management
+\item PMO | Program Office
+\item SBP | Software Build Plan. Breaks the software major capabilities/features that will be developed (backlog | Agile speak)
+\item Point of Departure Build | Software baseline for foundation of project and theoretical data to be fed in the form of tests to ensure behavior is correct.
+\item Framework Enhancement Build | Modifications to the baseline to improve functionality and extendibility of the environment being used (OpenGL | graphics programming, libgc | C library that several programs like OpenGL utilize). See the layering effect.
+\item Capability/Features Builds | Once the skeleton is created in the form of frameworks, add more components that utilize this newly created foundation, such as graphics and must have features.
+\item BOE | Basis of Estimate. How many lines of code will be developed and the hours associated with the task's completion. Needs high-level description of what each capability/feature will achieve 
+\item WBS | Work Breakdown Structure. All activities are organized base on hours/budget for activities that nee to be performed as part of program execution. \footnote{See Lecture 2 | Pg. 18 for example}. Software management, support, development, test, and maintenance activities need to be created.
+\item SW | Software
+\item SDP | Software Development Plan
+\item SPM | Software Program Manager
+
+
+\end{itemize}
+\newpage
+
+\section{Chapter 2 | Iterative \& Evolutionary}
+
+
+\subsection{General Notes}
+
+\begin{itemize}
+
+\item \emph{All} software is compiled across the team into \emph{one} iteration release.
+\item These builds are internal and not pushed to production (\textcolor{red}{PoC | Proof of Concept})
+\item Goes well with version control systems such as Git. Bugs can be traced to release builds.
+\item Most people now ascribe to IID however some DoD contracts still conform to the Waterfall methodology.
+\item It is best to mix and match risk and client driven development, best of both worlds.
+\item If a timebox cannot be met, the overall scope of the iteration is reduced (not all timeboxes need to be of equal length)
+\item IID embraces change not chaos. Needless changes are prohibited.
+\item Software Engineers need only know the qualities of the final build, not the individual mechanisms that make up the system.
+
+\end{itemize}
+
+\subsection{Key Terms}
+
+\begin{itemize}
+
+\item Iterative Development | Building software in which the overall lifecycle is composed of several iteration in sequence
+\item Iteration | Self-contained mini-project composed of activities such as requirement \\ analysis, design, programming, and testing.
+\item Iteration Release | A stable, integrated and tested \emph{partially} complete system.
+\item Iterative and Incremental Development (\textcolor{red}{IID}) | Growing a system via iterations
+\item Risk-driven iterative development | Riskiest, most difficult elements of a project are chose for the early iterations.
+\item Client-driven iterative development | Clients choose the contents of the next iteration based on what they perceive is the best business approach
+\item Timeboxing | Practice of fixing the iteration end date and not allowing it to change
+\item Evolutionary iterative development | Requirements can change over the duration of the project's lifetime rather than using frozen requirements defined in the beginning
+\item Adaptive development | Element adapt in response to feedback form prior work (user, tests, developers, etc.)
+\item Cone of uncertainty |  An initial phase (early requirements change) of high uncertainty which drops as time passes and information accumulates.
+\item Incremental delivery | Practice of repeatedly delivering a system into production in a series of expanding capabilities.
+\item EVO | First iterative and evolutionary method, starting in the 1960s. Plans iterations by highest value-to-cost ratio, and strongly promotes the unambiguous definition of quality requirements.
+\item UP or RUP | Unified Process. Focuses on driving down the riskiest elements and the creation of the core architecture of the project.
+
+\end{itemize}
+
+\end{document}
