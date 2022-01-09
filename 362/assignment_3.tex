@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amsmath}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{minted}
+\usepackage{mwe}
+
+\usepackage[margin=1.4in]{geometry}
+
+\title{Assignment \#3 | CS 362 Software Engineering}
+\author{Jared Dyreson \\
+        jareddyreson@csu.fullerton.edu \\
+        California State University, Fullerton}
+\date
+
+\DeclareRobustCommand{\bowtie}{%
+  \mathrel\triangleright\joinrel\mathrel\triangleleft}
+
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Chapter 8 | Software Quality Assurance}
+This process covers a multitude of points such as:
+
+\begin{itemize}
+\item Quality Management Process
+\item Effective software engineering technology (methods and tools)
+\item Formal technical reviews that are applied throughout the software process
+\item Multitiered testing strategy
+\item Control of software documentation and the changes made to it
+\item A procedure to ensure the compliance with software development standards (when applicable)
+\item Measurement and reporting mechanisms
+\end{itemize}
+
+All of these actions attempt to ensure the quality and effectiveness of the software produced.
+There are also different axes in which quality can be measured such as design and conformance.
+These procedures also can be fully automated, manual or a hybrid of the two.
+During the process, data should be taken to help further improve future endeavors.
+Removing errors that occur in this process is less costly and locks down the possibility of catastrophic consequences in production.
+
+\section{Chapter 9 | Software Configuration Management}
+
+\emph{Software configuration management} (SCM) activities include:
+
+\begin{enumerate}
+\item Identify change
+\item Control change
+\item Ensure that change is being properly implemented
+\item Report changes to others who may have an interest 
+\end{enumerate}
+
+This is the basis for version control systems such as Git.
+Git was created by Linus Torvalds during the early development of the Linux Kernel.
+It is important for a software engineering team to work in sync with one another and being able to revert/apply changes to a codebase is paramount to this.
+While Git is a piece of software that we use (considered automated per Chapter 8), the most effective part comes when technical reviews are conducted.
+Given the proper information, members in a group can allow or disallow these changes.
+
+\end{document}

@@ -1,0 +1,202 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amsmath}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\usepackage{graphicx}
+
+\graphicspath{ {./assets/} }
+
+\usepackage[margin=1.4in]{geometry}
+
+\title{Lab \#4 | CS 462} 
+\author{Jared Dyreson\\ 
+        California State University, Fullerton}
+
+\DeclareRobustCommand{\bowtie}{%
+  \mathrel\triangleright\joinrel\mathrel\triangleleft}
+
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Inception Phase}
+
+\subsection{Use Case}
+
+\textbf{Definition} | text stories, widely used to discover and record requirements. These are not diagrams.
+
+
+\newpage
+
+\subsection{Quiz with Answers}
+
+\begin{enumerate}
+
+\item A fully dressed use case contains the following:
+\begin{itemize}
+\item Use Case Name | starts with a verb
+\item Scope | system under design
+\item Level | "user-goal" or "sub-function"
+\item Primary Actor | Calls on the system to deliver its services
+\item Stakeholders and Interests | Who cares about this use case, and what do they want?
+\item Preconditions | What must be true on start, \emph{and} worth telling the reader?
+\item Success Guarantee | What must be true on successful completion, \emph{and} worth telling the reader
+\item Main Success Scenario | A typical, unconditional happy path scenario of success
+\item Extensions | Alternate scenarios of success or failure
+\item Special requirements | Related, non-functional requirements
+\end{itemize}
+
+\item Each phase and iteration has some \underline{\textbf{placeholder}} focus, and concludes with a well-defined milestone.
+
+\item Guidelines for writing use cases:
+\begin{itemize}
+\item Use the Elementary Business Process (EBP) Test | how much money will this make me?
+\item Use the "Boss Test" | "what have you been doing all day?" should not be met with "not a whole lot"
+\item Use the Size Test | is this artifact too small or too big? Does it convey what I need it to?
+\end{itemize}
+
+\item Fully dressed use case terminology:
+\begin{itemize}
+\item Scope | bounds of the system under design
+\item Success Guarantee | states in a system that must be true for the system to complete successfully in that case
+\item Extensions | Alternate success/failure scenarios (authentication, sufficient funds)
+\item Primary Actor | Calls on the system to deliver its services (customer withdrawing money from account)
+\item Stakeholders and Interests | Who cares about this use case, and what do they want? 
+\item Preconditions | What must be true on start, and worth telling the reader (Sufficient funds to complete the transaction are required)
+\item Main Success Scenario | A typical, unconditional happy path scenario of success (Customer can pay their bills)
+\end{itemize}
+
+\newpage
+
+\item Fully dress use case terminology (continued):
+\begin{itemize}
+\item Domain Rules | dictates how a domain or business will operate
+\item Use case(s) | collection of related success and failure scenarios that describe an actor using a system to support a goal.
+\item Vision | an executive summary that briefly describes the project as a context for the major players to establish a common understanding of the project
+\item Actor | something with a behavior mechanism, such as a computer system, person or organization
+\item Scenario | a specific sequence of actions and interactions between actors and the system (\textbf{use case instance})
+\item Use Case Instance | scenario
+\item Use Case Model | the set of all written use cases
+\end{itemize}
+
+\item The most important thing you can learn in object-oriented analysis and design (OOAD) is \underline{\textbf{objects are responsible for their own actions | responsibility assignment}}\footnote{See Pg. 6}. More information can be found \href{https://www.umsl.edu/~sauterv/analysis/488_f01_papers/quillin.htm}{\underline{here}}. 
+
+\item Use cases can be written in different formats and levels of formality. Match the use case format with its description:
+
+\begin{itemize}
+\item Fully dressed | all steps and variations are written in detail, and there are supporting sections
+\item Brief | terse, one-paragraph summary, usually of the main success scenario
+\item Casual | Informal paragraph(s) format that covers various scenarios
+\end{itemize}
+
+\item Match the UML Perspective with its description
+
+\begin{itemize}
+\item More information can be found \href{http://etutorials.org/Programming/UML/Chapter+4.+Class+Diagrams+The+Essentials/Perspectives/}{\underline{here}}
+\item Specification Perspective | Diagrams describe software abstractions or components with specifications and interfaces, but no commitment to a particular implementation
+\item Conceptual Perspective | Diagrams are interpreted as describing things in a situation of the real world or domain interest
+\item Implementation Perspective | Diagrams that describe software implementations in a particular technology
+\end{itemize}
+
+\item Use cases are defined to satisfy goals of the primary actors. The basic procedure to find meaningful use cases for these actors are listed below:
+
+\begin{itemize}
+\item Choose the system boundary
+\item Identify the primary actors
+\item Identify the goals for each primary actor
+\item Define use cases that satisfy user goals; name them according to their goal
+\end{itemize}
+
+\item The phases of the Unified Process (UP) are equivalent to the phases of the traditional waterfall process model: \textbf{FALSE}.
+\item Should you analyze the Inception Phase artifacts thoroughly during Inception? |  \textbf{NO}, should be brief and rough.
+
+\item Use cases can be characterized by which of the following:
+\begin{itemize}
+\item Are text documents
+\item Are widely used to discover and record requirements
+\item Describe the system's operational behavior as used by it primary actors
+\end{itemize}
+
+\item Which should be written first, use cases or the vision: \textbf{VISION}
+\item Object-Oriented Analysis can be characterized by\footnote{See Pg 7}:
+
+\begin{itemize}
+\item An investigation of the problem, rather than how a solution is defined
+\item Emphasizes a conceptual solution that fulfills the requirements
+\item Do the right thing (measure twice)
+\end{itemize}
+
+\item There are three kinds of external actors. Match the word or phrase with its description
+\begin{itemize}
+\item Offstage Actor | has an interest in the behavior of the use case, but not directly involved
+\item Supporting Actor | provides a service to the system under discussion
+\item Primary Actor | has use goals fulfilled through using the services of the system under discussion
+\end{itemize}
+
+\item The Supplementary Specification captures non-functional requirements, information, and constraints not easily captured in the use cases. Which of the elements below are likely to be included in the Supplementary Specification?\footnote{See Pg 107}
+\begin{itemize}
+\item Installation, administration, and help documentation
+\item Reports and report formats
+\item Quality attributes | Usability, reliability, performance, and supportability
+\item Development constraints
+\item Hardware and software constraints 
+\end{itemize}
+\item What are good rules of thumb for answering the following: \emph{What is the useful level to express use cases for application requirement analysis?}:
+\begin{itemize}
+\item Boss Test | "What have you been doing all day?!"
+\item EBP Test | Events that adds measurable business value (more \$)
+\item The Size Test | Did you try to explain too much in a small amount of text? Is this text too pedantic for such a small step?
+\end{itemize}
+
+\item Object Oriented Design can be characterized by which of the following?
+\begin{itemize}
+\item Do the thing right (cut once)
+\item Defining software objects and how they collaborate to fulfill the requirements
+\end{itemize}
+
+\item What artifacts are typically started in the Inception Phase?\footnote{See Pg. 50}:
+\begin{itemize}
+\item Vision and Business Case
+\item Use-Case Model
+\item Supplementary Specification
+\item Glossary
+\item Risk List/Registry
+\item Prototypes and PoCs (Not in list)
+\item Iteration Plan (Not in list)
+\item Phase Plan \& Software Development Plan (Not in list)
+\item Development Case (Not in list)
+\end{itemize}
+
+\item What are the Unified Process phases?
+\begin{itemize}
+\item Inception Phase
+\item Elaboration Phase
+\item Construction Phase
+\item Transition Phase
+\end{itemize}
+\end{enumerate}
+
+\end{document}

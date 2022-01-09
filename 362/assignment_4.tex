@@ -1,0 +1,73 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amsmath}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{minted}
+\usepackage{mwe}
+
+\usepackage[margin=1.4in]{geometry}
+
+\title{Assignment \#4 | CS 362 Software Engineering}
+\author{Jared Dyreson \\
+        jareddyreson@csu.fullerton.edu \\
+        California State University, Fullerton}
+\date
+
+\DeclareRobustCommand{\bowtie}{%
+  \mathrel\triangleright\joinrel\mathrel\triangleleft}
+
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Chapter 13 | Design Concepts and Principles}
+
+During the design process, it is important for engineers to come up with multiple solutions for the problem at hand, picking the best one.
+This leads to a more wholistic approach and allows for a more robust implementation.
+Open discussions with others can also highlight strengths and weaknesses in each other's ideas.
+
+
+After that, all components should get stitched together, in a modular fashion.
+This will allow for refinement and improvement on each component, without disrupting the others.
+\emph{Functional independence} is a direct byproduct of modularity, allowing it to not be strictly dependent of.
+This leads to fast production and problems can easily be traced.
+Cohesion is the act of linking two modules together, and it itself is independent of the two modules.
+
+However, when software is too intermingled through the process of \emph{coupling}, distinct errors occur.
+The codebase becomes monolithic, inefficient and hard to maintain over time.
+Limiting such actions is strongly encouraged, and links should only be made at crucial moments.
+Take a compiler for example (I had to write on this semester, yay!); it is comprised of a lexer, parser and code generator.
+It would be foolish for the lexer to be deeply embedded into the parser.
+All the lexer is concerned with is token generation and the parser is processing said tokens.
+Any changes to the lexer would result to changes made to the parser, if coupled deeply.
+
+Strong designs are crucial for software quality assessments.
+Design construction leads to better code written, because the requirements and boundaries are clearly defined.
+Everyone on the team knows what to do and will use the proper tools to complete the task.
+Tasks can be efficiently delegate amongst individuals via a ticket system.
+
+
+\end{document}

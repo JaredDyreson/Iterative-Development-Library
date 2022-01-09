@@ -1,0 +1,162 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amsmath}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{minted}
+\usepackage{mwe}
+
+\usepackage[margin=1.4in]{geometry}
+
+\title{Assignment \#2 | CS 362 Software Engineering}
+\author{Jared Dyreson \\
+        jareddyreson@csu.fullerton.edu \\
+        California State University, Fullerton}
+\date
+
+\DeclareRobustCommand{\bowtie}{%
+  \mathrel\triangleright\joinrel\mathrel\triangleleft}
+
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Chapter 4 | Software Process and Project Metrics}
+
+\begin{itemize}
+\item estimation of time of completion and quality of work
+\item quantitative
+\item pin point problems
+\item analyzed by software managers and collected by SWEs
+\item past data helps us in the future
+\item \textbf{Four Reasons}
+\begin{itemize}
+\item characterize
+\item evaluate
+\item predict
+\item improve
+\end{itemize}
+\end{itemize}
+
+\subsection{4.1}
+
+\textbf{TL;DR : Make sure you're on track to publish}
+
+\begin{itemize}
+\item measurement occurs  as the result of the collection of one or more data points
+\item \emph{indicator}: metric or combination metrics that provide insight into the SW process
+\end{itemize}
+
+\newpage
+
+\subsection{4.2}
+
+\begin{itemize}
+\item \emph{Project Indicators} enable a SW Project Manager to
+\begin{itemize}
+\item assess the status of an ongoing project
+\item track potential risks
+\item uncover problem areas before they go \emph{critical}
+\item adjust work flow or tasks
+\item evaluate the project team's ability to control quality of software work products
+\end{itemize}
+\item lots of factors influence development (time, resources, customers)
+\item outcomes manifest in several forms (effort, money, scheduling)
+\item \emph{PSP | Personal Software Process} helps evaluate engineers performance and can help improve (private metrics)
+\item \emph{Public Metrics: }once private now open (project level defect rates, calendar times, etc)
+\item 
+\end{itemize}
+
+
+\subsection{4.3 | Failure Analysis}
+
+\begin{itemize}
+\item All errors and defects are categorized by origin
+\item The cost to correct each error and defect is recorded
+\item The number of errors and defects in each category is counted and ranked in descending order
+\item The overall cost of errors and defects in each category is computed
+\item Resultant data is analyzed to uncover the categories that result in highest cost to the organization
+\end{itemize}
+
+\subsection{4.5 | Metrics for Quality}
+
+\begin{itemize}
+\item project managers make sure things don't get whack son
+\item ensure that the code you write will be dynamic and agnostic of specific features that might depreciate quickly
+\item programs that aren't maintainable are a waste, make sure that shit is airtight (called \emph{spoilage})
+\item use DRE to make sure your codebase is good $\rightarrow \textrm{DRE} = \frac{E}{(E + D)}$
+\end{itemize}
+
+\subsection{Resources}
+\begin{itemize}
+\item \href{https://quizlet.com/278053354/software-engineering-a-practitioners-approach-pressman-ch-4-flash-cards/}{Chapter 4 Quizlet}
+\end{itemize}
+
+
+\newpage
+
+\section{Chapter 5 | Software Project Planning}
+
+\subsection{Overview}
+
+\begin{itemize}
+\item make sure you have a roadmap yo
+\item think about the present and the future
+\item past experience also contributes to ease of development
+\end{itemize}
+
+\subsection{Observations on Estimating}
+
+\begin{itemize}
+\item good project managers make sure problems are addressed before they even happen
+\item foresight is key
+\item project complexity is subjective 
+\item project size can change the accuracy and efficacy of estimates
+\item "What can go wrong will go wrong" | Murphy's Law
+\end{itemize}
+
+\subsection{Software Scope}
+
+\begin{itemize}
+\item what data is being manipulated and the stuff that does the manipulation
+\item this is not clear initially but becomes clearer as the project continues on
+\item make sure you and the client are on the same page, so it minimizes the confusion on expectations
+\item ask meaningful questions to layout what exactly needs to be done
+\item are the "demands" even reasonable?
+\end{itemize}
+
+\subsection{Summary}
+
+\begin{itemize}
+\item Make sure code you write is extensible
+\item Ensure that project needs are addressed properly
+\item Evaluate current technology to ensure delivery of product
+\item Software is a huge component in project development
+\end{itemize}
+%\begin{itemize}
+%\href{https://quizlet.com/256627384/software-engineering-chapter-5-flash-cards/}{Chapter 5 Quizlet}
+%\end{itemize}
+
+\end{document}
